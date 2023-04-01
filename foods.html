@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                
+                <a href="soylentgreen.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/FoodImages/sg.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Tasty wafers made from plankton. Then human corpses. Tastes peopley!
+                        </div>
+                    </div>
+                </div>
+                </a>
+                
+                <a href="lion.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/FoodImages/delight.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            The most delicious treat you've ever tasted. Infused with magic and used by the White Witch to bring people under her control.
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+
+                <a href="alice.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/FoodImages/cookies.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            A special treat for Alice that does, quite literally, make her as big as a house.
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <a href="spaceballs.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/FoodImages/thehutt.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Ok, this one is tenuous, but an intergalactic gangster made entirely of oozing, dripping pizza-y goodness - what's not to like?
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <a href="lostboys.html">
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(Images/FoodImages/maggotrice.png)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="subtitle">
+                                A high protein take-away from your local chinese - or is it? Can't trust 'em pesky vampires to play fair!
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+
+                <a href="future2.html">
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(Images/FoodImages/rehydrated.png)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="subtitle">
+                                A 4 inch pizza that can turn into a 14 inch pizza in 2 seconds? It sounds like heaven to me.
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+            </div>
+
+    </div>    
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+</html>

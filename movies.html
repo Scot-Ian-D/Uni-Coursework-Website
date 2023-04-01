@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+                
+                <a href="soylentgreen.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/MoviesImages/soylentgreen.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Soylent Green
+                        </div>
+                    </div>
+                </div>
+                </a>
+                
+                <a href="lion.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/MoviesImages/llw.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            The Lion, The Witch and the Wardrobe
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+
+                <a href="alice.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/MoviesImages/alice.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Alice in Wonderland
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <a href="spaceballs.html">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(Images/MoviesImages/spaceballs.png)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            Spaceballs
+                        </div>
+                    </div>
+                </div>
+                </a>
+
+                <a href="lostboys.html">
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(Images/MoviesImages/lostboys.png)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="subtitle">
+                                The Lost Boys
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+
+                <a href="future2.html">
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(Images/MoviesImages/future.png)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="subtitle">
+                                Back to the Future Part II
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+            </div>
+
+    </div>    
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+</html>

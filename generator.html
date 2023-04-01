@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="profile-content-wrapper">
+                    <h1>Food Name Generator</h1>
+                    <p>Make your own fictional food names.</p>
+
+                    <input id="clickMe" type="button" value="Generate Food Name" onclick="generateName();" />
+  
+                    <h2 id="random_name"></h2>
+                    
+                  
+                    <script>
+                      function capFirst(string) {
+                      return string.charAt(0).toUpperCase() + string.slice(1);
+                      }
+                  
+                      function getRandomInt(min, max) {
+                          return Math.floor(Math.random() * (max - min)) + min;
+                      }
+                  
+                      function generateName(){
+                        var first_name = ["Scrumtrulescent","Cattywampus","Bumfuzzled","Wabbit","Fuggy","Bardolatrous","Borborygmic","Syzygal","Redonkulous","Blue","Yellow","Green","Black","Smelly","Pickled","Gangerous","Oozing","Pulsating","Loquacious"];
+                  
+                        var last_name = ["Antelope","Apple","Avocado","Bacon","Broccoli","Babaganoosh","Cabbage","Cheese","Chocolate","Crab","Curry","Eel","Fish","Guancamole","Hummus","Jerky","Lasagne","Moose","Pizza","Quesadilla","Toast","Waffle","Zucchini"];
+                  
+                        var name = capFirst(first_name[getRandomInt(0, first_name.length + 1)]) + ' ' + capFirst(last_name[getRandomInt(0, last_name.length + 1)]);
+                          document.getElementById("random_name").innerHTML = name;
+                      }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+    </div>    
+</body>
+</html>
